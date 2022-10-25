@@ -1,0 +1,24 @@
+name: Shell Commands
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo single!
+      - name: multi-line
+        run: |
+          echo Add other actions,
+          node -v
+          npm -v
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo single build!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
