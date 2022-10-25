@@ -1,0 +1,8 @@
+name: This workflow will fail
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: eccho fail!
