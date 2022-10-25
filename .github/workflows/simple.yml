@@ -14,8 +14,9 @@ jobs:
       - name: python command
         run: |
           import platform
-          print(platform.python_version())
-          print(platform.processor())
+          print("Python version: ", platform.python_version())
+          print("Processor: ", platform.processor())
+        shell: python
   build:
     runs-on: ubuntu-latest
     steps:
