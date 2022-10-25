@@ -16,6 +16,7 @@ jobs:
           import platform
           print(platform.python_version())
           print(platform.processor())
+        shell: python
   build:
     runs-on: ubuntu-latest
     steps:
